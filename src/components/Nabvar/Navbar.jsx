@@ -1,27 +1,55 @@
-
-import CarWidget from "../Car-Widget/CarWidget"
-import MenuIcon from '@mui/icons-material/Menu';
 import "./Navbar.css"
+
+import { Link } from "react-router-dom";
+import img from "./logo.png"
+
 const Navbar = () => {
   return (
     <>
-        <body>
-            <header>
-                <a  href="#" className="logo">Foods</a>
-                <div id="menu-icon"><MenuIcon/></div>
+       
+          
+          <nav className="navbar">
+            <div className="logo">
+              <Link className="a" to="/">
+                <img src={img} alt="" />
+              </Link>
+            </div>
+            <ul className="nav-links">
+              <li>
+                <Link to="/">
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <Link to="/category/Gryffindor">
+                  Gryffindor
+                </Link>
+              </li>
+              
+              <li>
+                <Link to="/category/Slytherin">
+                  Slytherin
+                </Link>
+              </li>
+              
+              <li>
+                <Link to="/category/Ravenclaw">
+                  Ravenclaw
+                </Link>
+              </li>
+              
+              <li>
+                <Link to="/category/Hufflepuff">
+                  Hufflepuff
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
-                <ul className="navbar">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#"><CarWidget/></a></li>
-                </ul>
 
 
-
-            </header>
-        </body>
+            
+        
         
         
         
